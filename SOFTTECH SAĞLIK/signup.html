@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Softtech Sigorta</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!----CSS link----->
+    <link rel="stylesheet" href="style1.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- ======= NAVBAR LOGO KISMI ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto"><a href="startingpage.html">Softtech Sigorta</a></h1>
+        
+
+
+      </div>
+    </header><!-- End Header -->
+
+  
+    
+
+      <section>
+        <div style="height:140px; width:140px; clear:both;"></div>
+
+          <div class="container">
+            <div class="card login-card">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src="image/login.jpg" class="login-card-img">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    
+                    <p class="login-card-description">Üye Ol</p>
+                    <form action="#!">
+                      <div class="form-group mb-4">
+                        <input type="text" id="username" name="username" placeholder="Ad" class="form-control" maxlength="30" />
+
+                      </div>
+                      <div class="form-group mb-4">
+                        <input type="text" id="usersurname" name="usersurname"class="form-control" placeholder="Soyad"  maxlength="30" />
+                      </div>
+
+                      <div class="form-group mb-4">
+                        <input type="text" id="email" name="email"class="form-control" placeholder="Email" />
+                      </div>
+
+
+
+                      <div class="form-group mb-4">
+                        
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" />
+                      </div>
+
+
+                      <div class="form-group mb-4">
+                        <input type="password" id="repassword" name="repassword" class="form-control"placeholder="Şifre Tekrar" />
+                      </div>
+
+
+
+
+                      <input type="submit" id='signUp' name="signup_submit" class="btn btn-block login-btn mb-4" value="Üye Ol" />
+
+                    </form>
+                  
+                  
+                  
+                  
+                    <nav class="login-card-footer-nav">
+                      <a>Zaten Üye Misiniz?</a>
+                    </nav>
+                    <nav class="login-card-footer-nav">
+                      <a href="login.html">Giriş Yap</a>
+                    </nav>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div style="height:70px; width:70px; clear:both;"></div>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+      </section>
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-info">
+            <h3>Softtech Sigorta</h3>
+            <p>
+              İstanbul,Turkey<br><br>
+              <strong>Phone:</strong> +90 000000000<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+            
+
+      
+
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Softtech Sigorta</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+
+
+
+
+      <!--  AŞAĞISI BACKEND KISMI FRONT END'DE(ÜSTTE) IDLERİ DEĞİŞTİRMEYİN LÜTFEN !!! -->
+
+
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { getDatabase , set, ref,get,child} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+      import { getAuth,createUserWithEmailAndPassword ,} from  "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDOk1AuHx_mX_HpvzAj--5qgftdt3AlF4Q",
+        authDomain: "softtech-sigorta-e715a.firebaseapp.com",
+        databaseURL: "https://softtech-sigorta-e715a-default-rtdb.firebaseio.com",
+        projectId: "softtech-sigorta-e715a",
+        storageBucket: "softtech-sigorta-e715a.appspot.com",
+        messagingSenderId: "331172424113",
+        appId: "1:331172424113:web:a4661c4edbfc7a90a43590",
+        measurementId: "G-GHENXCZLY6"
+      };
+    
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+      const auth = getAuth();
+      const db=ref(database); 
+
+      signUp.addEventListener('click',(e) => {
+
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          var repassword = document.getElementById('repassword').value;
+          var username = document.getElementById('username').value;
+          var usersurname = document.getElementById('usersurname').value;
+
+        if(password==repassword){
+          createUserWithEmailAndPassword(auth, email, password)
+              .then((userCredential) => {
+              // Signed in 
+                const user = userCredential.user;
+                
+                get(child(db,"users/",user.uid)).then((snapshot) =>{
+                  
+                      set(ref(database, 'users/' + user.uid), {
+                          username: username,
+                          usersurname:usersurname,
+                          email: email,
+                          password: password
+                      });
+                      alert('user created!');
+                      
+                      window.location = "login.html"; // Redirecting to other page.
+
+
+                    
+                });
+
+            })
+              .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+
+              alert(errorMessage);
+              
+              });
+        }
+        else{
+              alert("Şifreler aynı değil")
+            } 
+            e.preventDefault();
+
+      });
+
+
+
+
+
+
+    
+      
+
+  </script>
+
+</html>

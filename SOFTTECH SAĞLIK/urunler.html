@@ -1,0 +1,349 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+          <meta charset="utf-8">
+          <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+          <title>Softtech Sigorta</title>
+          <meta content="" name="description">
+          <meta content="" name="keywords">
+        
+          <!-- Favicons -->
+          <link href="assets/img/favicon.png" rel="icon">
+          <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        
+          <!-- Google Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        
+          <!-- Vendor CSS Files -->
+          <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+          <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+          <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <script>
+		
+		function Delete(e){
+			let items = [];
+			JSON.parse(localStorage.getItem('items')).map(data=>{
+				if(data.id != e.parentElement.parentElement.children[0].textContent){
+					
+					items.push(data);
+
+				}
+			});
+			localStorage.setItem('items',JSON.stringify(items));
+			window.location.reload();
+		};
+		</script>
+        
+        
+          <!-- Template Main CSS File -->
+          <link href="assets/css/style.css" rel="stylesheet">
+          <link href="urun.css" rel="stylesheet">
+<link rel="stylesheet" href="index.css"/>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+          <!-- =======================================================
+          * Template Name: Sailor - v4.8.0
+          * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+          * Author: BootstrapMade.com
+          * License: https://bootstrapmade.com/license/
+          ======================================================== -->
+        </head>
+        
+        <body>
+        
+          <!-- ======= Header ======= -->
+          <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center">
+              
+              <!-- SAĞ ÜST -->
+        
+              <h2 class="logo me-auto"><a href="dashboard.html">Softtech Sigorta</a></h2>
+              
+              <!-- DİĞER NAVBARS -->
+        
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <!-- pricing.html kısmı değişecek -->
+                  <li><a href="urunler.html">Ürünler</a></li>
+                  <li><a href="paketler.html">Paketler</a></li>
+                    
+        
+                  
+                  <!-- HESABIM KISMI -->
+                  <li class="dropdown"><a href="#">Hesabım<i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      
+                      <li><a href="#" id='Logout' name="logout">Çıkış Yap</a></li>
+        
+        
+                    </ul>
+                  </li>
+
+                  <li><div class="iconShopping">
+                    <p>0</p>
+                    <i class="fa fa-shopping-cart"></i>
+                  </div></li>
+                </ul>
+                
+              </nav><!-- .navbar -->
+        
+            </div>
+          </header><!-- End Header -->
+
+
+
+         <!-- 1.ÜRÜN-->
+      
+
+
+         <section>
+          <div >
+
+              <div class="itemsBox">
+                <div class="item">
+                  <img class="card-img-top" src="image/children.jpg" alt="" />
+                  <div class="itemInfo">
+                    <h1>Çocuğum için Eğitim Sigortası</h1>
+                    
+                    Çocuğum için Eğitim Sigortası, çocuğunuzun 
+                      eğitiminin kesintiye uğramadan devam edebilmesi 
+                      için teminat sunan finansal bir güvencedir.
+                      <p><span class="old-price">₺319,99</span><span class="new-price">₺279,99</span></div>
+                        <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div >
+              <div >
+
+                <div class="itemsBox">
+                  <div class="item">
+                    <img class="card-img-top" src="image/hayat.jpg" alt=""/>
+                    <div class="itemInfo">
+                      <h1>Prim İadeli Hayat Sigortası</h1>
+                      
+                      Prim İadeli Hayat Sigortası, sigorta süresi 
+                      sonunda hayatta olmanız halinde ödediğiniz primleri 
+                      size iade eden finansal bir güvencedir.
+                      <p><span class="old-price">₺659,99</span><span class="new-price">₺559,99</span></div>
+                        <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+                
+         </section>
+         <section>
+          <div >
+
+              <div class="itemsBox">
+                <div class="item">
+                  <img class="card-img-top" src="image/tamkapsamlıhayat.jpg" />
+                  <div class="itemInfo">
+                    <h1>Tam Kapsamlı Hayat Sigortası</h1>
+                    
+                    Tam Kapsamlı Hayat Sigortası, yaşam kaybı ile tam ve
+                    kalıcı sakatlık risklerine karşı teminat sunarak sizin ve
+                    sevdiklerinizin hayat standardını koruyan finansal bir güvencedir.
+                    
+                    <p>₺<span>419,99</span></p>
+                    <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div >
+              <div >
+
+                <div class="itemsBox">
+                  <div class="item">
+                    <img class="card-img-top" src="image/kadın.jpg" />
+                    <div class="itemInfo">
+                      <h1>Kadına Özel Hastalık Sigortası</h1>
+                      
+                      Kadına Özel Kritik Hastalık Sigortası, kritik kadın 
+                      hastalıklarının teşhisi anında maddi güvence sağlayan, 
+			                bu sayede hayat standardınızı koruyan finansal bir güvencedir.
+                      <p>₺<span>352,95</span></p>
+                      <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+                
+         </section>
+         <section>
+          <div >
+
+              <div class="itemsBox">
+                <div class="item">
+                  <img class="card-img-top" src="image/tamkapsamlı.jpg" />
+                  <div class="itemInfo">
+                    <h1>Tam Kapsamlı Hastalık Sigortası</h1>
+                    
+                    Tam Kapsamlı Kritik Hastalık Sigortası, kritik hastalıkların 
+                    teşhisi anında toplu para güvencesi sağlayan, bu sayede 
+                    sizin ve ailenizin hayat standardını koruyan finansal bir güvencedir.
+                    <p>₺<span>279,90</span></p>
+                    <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div >
+              <div >
+
+                <div class="itemsBox">
+                  <div class="item">
+                    <img class="card-img-top" src="image/kredidestek.jpg" />
+                    <div class="itemInfo">
+                      <h1>Kredi Tam Destek Sigortası</h1>
+                      
+                      Softtech Sigorta özel istem dışı işsizlik, geçici sakatlık 
+                      veya hastaneye yatış,yaşam kaybı,sakatlık gibi risklerde, 
+                      son kredi kartı hesap özetinizdeki borç tutarını Türkiye İş Bankası’na biz ödeyelim.
+                      <p>₺<span>314,99</span></p>
+                      <a href="#" title="add to cart" class="attToCart">Sepete Ekle</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+                
+         </section>
+        
+          <!-- ======= Footer ======= -->
+          <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+        
+                  <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                      <h3>Softtech Sigorta</h3>
+                      <p>
+                        İstanbul,Turkey<br><br>
+                        <strong>Phone:</strong> +90 000000000<br>
+                        <strong>Email:</strong> info@example.com<br>
+                      </p>
+                      
+        
+                
+        
+                 
+                </div>
+              </div>
+            </div>
+        
+            <div class="container">
+              <div class="copyright">
+                &copy; Copyright <strong><span>Softtech Sigorta</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+            </div>
+          </footer><!-- End Footer -->
+        
+          <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+          
+          
+          
+          
+	<div class="cartBox">
+		<div class="cart">
+			<i class="fa fa-close"></i>
+			<h1>Sepetim</h1>
+			<table></table>
+		</div>
+	</div>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+        import { getAuth,signOut,onAuthStateChanged   } from  "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDOk1AuHx_mX_HpvzAj--5qgftdt3AlF4Q",
+        authDomain: "softtech-sigorta-e715a.firebaseapp.com",
+        databaseURL: "https://softtech-sigorta-e715a-default-rtdb.firebaseio.com",
+        projectId: "softtech-sigorta-e715a",
+        storageBucket: "softtech-sigorta-e715a.appspot.com",
+        messagingSenderId: "331172424113",
+        appId: "1:331172424113:web:a4661c4edbfc7a90a43590",
+        measurementId: "G-GHENXCZLY6"
+    };
+
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database=getDatabase(app);
+        const auth = getAuth();
+         Logout.addEventListener('click',(e) => {
+        signOut(auth).then(() => {
+          // Sign-out successful.
+          window.location="startingpage.html";
+        }).catch((error) => {
+          alert("ERROR");
+
+        });
+      });
+      
+
+      const user = auth.currentUser;
+
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              
+              console.log("  Email: " + user.email);
+              // ...
+          } else {
+              // User is signed out
+              // ...
+              console.log("  Çıkış yapıldı" );
+              window.location="startingpage.html";
+          }
+          });
+         
+      </script>
+
+</body>
+
+</html>
+	<!-- script -->
+	<script src="urunler.js"></script>
+</body>
+</html>

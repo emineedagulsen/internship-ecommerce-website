@@ -1,0 +1,149 @@
+<html lang="en">
+  <head>
+  	<title>Softtech Sigorta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="login.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+	</head>
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+          
+          <!-- SAĞ ÜST -->
+    
+          <h1 class="logo me-auto"><a href="startingpage.html">Softtech Sigorta</a></h1>
+          
+         
+      </header><!-- End Header -->
+
+      
+    
+	<body class="img js-fullheight" style="background-image: url(bg.jpeg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Hesabınız Var mı?</h3>
+		      	<form action="#" class="signin-form">
+		      		<div class="form-group">
+                        <input type="text" id="email" name="email" class="form-control" placeholder="E-mail" />
+                    </div>
+	            <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" />
+	            </div>
+	            <div class="form-group">
+                    <input type="submit" id='Login' name="login_submit" class="form-control" value="Giriş Yap" />
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	
+                                    <a href="signup.html" class="form-control">Üye Ol</a>
+								
+                                    <input type="submit" id='ForgetPassword' name="forgetpasssword_submit" class="form-control" value="Şifremi Unuttum" />
+                    </div>
+	            </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+    <!--  AŞAĞISI BACKEND KISMI FRONT END'DE(ÜSTTE) IDLERİ DEĞİŞTİRMEYİN LÜTFEN !!! -->
+
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+        import { getAuth,signInWithEmailAndPassword ,onAuthStateChanged } from  "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDOk1AuHx_mX_HpvzAj--5qgftdt3AlF4Q",
+        authDomain: "softtech-sigorta-e715a.firebaseapp.com",
+        databaseURL: "https://softtech-sigorta-e715a-default-rtdb.firebaseio.com",
+        projectId: "softtech-sigorta-e715a",
+        storageBucket: "softtech-sigorta-e715a.appspot.com",
+        messagingSenderId: "331172424113",
+        appId: "1:331172424113:web:a4661c4edbfc7a90a43590",
+        measurementId: "G-GHENXCZLY6"
+    };
+  
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database=getDatabase(app);
+        const auth = getAuth();
+        
+        Login.addEventListener('click',(e) => {
+    
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    
+
+                    alert("Giriş Başarılı");
+                    window.location = "dashboard.html"; // Redirecting to other page.
+
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                });
+
+
+                e.preventDefault();
+
+
+    
+        });
+        const user = auth.currentUser;
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                
+                console.log("  Email: " + user.email);
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                console.log("  Kullanıcı oturum açmadı" );
+
+            }
+            });
+    ForgetPassword.addEventListener('click',(e) => {
+
+        window.location = "forgetpassword.html"; // Redirecting to other page.
+        e.preventDefault();
+
+
+
+
+    });
+     
+
+        
+    
+    </script>
+    
+</html>
